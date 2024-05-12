@@ -125,14 +125,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     backgroundColor: "#FFFFFF",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    flexDirection: "column",
+    flexBasis: "auto",
   },
   imageContainer: {
     alignItems: "center",
   },
   logo: {
-    width: 100, // Adjust width as needed
-    height: 100, // Adjust height as needed
+    width: 80, // Adjust width as needed
+    height: 80, // Adjust height as needed
   },
   title: {
     fontSize: 24,
@@ -143,14 +145,14 @@ const styles = StyleSheet.create({
   title2: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 25,
+    marginBottom: 10,
     textAlign: "center", // Center the text
     color: "#FF6E77",
   },
   subtitle: {
     fontSize: 16,
     color: "#666",
-    marginBottom: 40,
+    marginBottom: 10,
     marginHorizontal: 20,
   },
   label: {
@@ -164,9 +166,9 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     paddingVertical: 10,
     paddingHorizontal: 15,
-    marginHorizontal: 20,
+    marginHorizontal: 10,
     borderRadius: 20,
-    marginBottom: 20, // Add spacing between inputs
+    marginBottom: 10, // Add spacing between inputs
   },
   nextButton: {
     borderWidth: 1,
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 20,
-    marginTop: 20, // Adjusted marginTop to increase the gap between the agreement text and the button
+    marginTop: 10,// Adjusted marginTop to increase the gap between the agreement text and the button
     backgroundColor: "#FF6E77",
     alignItems: "center",
     marginHorizontal: 20,
@@ -198,8 +200,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 40,
   },
   squareButton: {
-    width: 60, // Adjusted width
-    height: 60, // Adjusted height
+    width: 50, // Adjusted width
+    height: 50, // Adjusted height
     backgroundColor: "#F5F5F5",
     justifyContent: "center",
     alignItems: "center",

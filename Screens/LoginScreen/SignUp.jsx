@@ -8,18 +8,21 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
+  Dimensions,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 export default function SignUp() {
   const navigation = useNavigation();
+  const screenWidth = Dimensions.get("window").width;
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={{ flex: 1 }}
       >
-        <View style={{ padding: 20 }}>
+        <View style={{ padding: screenWidth * 0.05 }}>
           {/* Back Button */}
           <TouchableOpacity
             onPress={() => navigation.goBack()}
@@ -86,7 +89,7 @@ export default function SignUp() {
 
           {/* Next Button */}
           <TouchableOpacity
-            style={styles.nextButton}
+            style={[styles.nextButton, { width: "100%" }]}
             onPress={() => navigation.navigate("Avatar")}
           >
             <Text style={styles.nextButtonText}>Next</Text>
@@ -115,15 +118,17 @@ export default function SignUp() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
-    paddingTop: 50,
     backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "space-around",
+    flexBasis: "auto",
+    flexDirection: "column",
   },
-  backButton: { paddingBottom: 20 },
+  backButton: { paddingBottom: 20, paddingTop:20 },
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 25,
+    marginBottom: 10,
   },
   subtitle: {
     fontSize: 16,
@@ -140,8 +145,9 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     paddingVertical: 10,
     paddingHorizontal: 15,
-    borderRadius: 20,
-    marginBottom: 20,
+    borderRadius: 30,
+    marginBottom: 10,
+    width: "100%", // Take full width of the container
   },
   agreementText: {
     fontSize: 14,
@@ -157,7 +163,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 20,
-    marginTop: 20,
+    marginTop: 15,
     backgroundColor: "#FF6E77",
     alignItems: "center",
   },
@@ -169,7 +175,7 @@ const styles = StyleSheet.create({
   loginTextContainer: {
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 20,
+    marginTop: 10,
   },
   loginText: {
     fontSize: 16,

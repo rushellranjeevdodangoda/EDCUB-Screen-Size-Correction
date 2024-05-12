@@ -158,8 +158,9 @@ export default function Avatar() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
-    paddingTop: 50,
+    justifyContent: "space-around",
+    flexDirection: "column",
+    alignItems: "center",
     backgroundColor: "white",
   },
   backButton: { paddingBottom: 20 },
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     color: "#666",
-    marginBottom: 20,
+    marginBottom: 10,
   },
   selectedAvatarContainer: {
     alignItems: "center",

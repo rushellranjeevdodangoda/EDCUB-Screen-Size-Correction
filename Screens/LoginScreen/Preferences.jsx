@@ -298,11 +298,13 @@ export default function Preferences() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 10,
-    paddingTop: 50,
+    justifyContent: "space-around",
+    flexDirection: "column",
+    paddingTop: 30,
+    paddingBottom: 20, 
     backgroundColor: "white",
   },
-  backButton: { paddingBottom: 20 },
+  backButton: { paddingBottom: 20, paddingBottom: 20 },
   title: {
     fontSize: 24,
     fontWeight: "bold",
@@ -331,14 +333,14 @@ const styles = StyleSheet.create({
   },
   environmentButtonsContainer: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     marginTop: 10,
   },
   environmentButton: {
-    height: 45,
+    height: 40,
     flex: 1,
     borderWidth: 1,
-    borderRadius: 22.5,
+    borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -350,12 +352,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     marginTop: 10,
+    
+    
   },
 
   activityButton: {
     backgroundColor: "#FF6E77",
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
     borderRadius: 50,
     paddingVertical: 10,
 

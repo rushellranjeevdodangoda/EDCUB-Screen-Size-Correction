@@ -62,7 +62,9 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-around",
     alignItems: "center",
   },
   catergotyToday: {

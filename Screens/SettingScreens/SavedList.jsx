@@ -64,7 +64,10 @@ export default function SavedList() {
 }
 
 const styles = StyleSheet.create({
-  barcontainer: {
+  container: {
+    flex: 1,
+    justifyContent: "space-around",
+    alignItems: "center",
     marginTop: 4,
     color: "#fff",
     marginBottom: 4,
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
 
   maincontainer: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
     alignItems: "center",
     padding: 10,
   },
